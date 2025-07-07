@@ -1,6 +1,4 @@
 class Person:
-    # A class to represent a person with a name and age.
-    # Create a list of Person objects from a list of dict
 
     people = {}
 
@@ -11,7 +9,7 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    # """Create a list of Person objects from a list of dictionaries."""
+
     person_list = []
     for person_dict in people:
         person = Person(person_dict["name"], person_dict["age"])
