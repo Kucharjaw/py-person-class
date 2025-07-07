@@ -1,17 +1,17 @@
 class Person:
-    #"""A class to represent a person with a name and age.""""""
-    #Create a list of Person objects from a list of tuples.
+    # A class to represent a person with a name and age.
+    # Create a list of Person objects from a list of dict
 
     people = {}
 
-    def __init__ (self, name: str, age: int) -> None:
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
-        self.age= age
+        self.age = age
         Person.people[self.name] = self
 
 
 def create_person_list(people: list) -> list:
-    #"""Create a list of Person objects from a list of dictionaries."""
+    # """Create a list of Person objects from a list of dictionaries."""
     person_list = []
     for person_dict in people:
         person = Person(person_dict["name"], person_dict["age"])
@@ -25,6 +25,3 @@ def create_person_list(people: list) -> list:
             person = Person.people[person_dict["name"]]
             person.husband = Person.people[person_dict["husband"]]
     return person_list
-
-
-
